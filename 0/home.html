@@ -84,20 +84,25 @@
 		</div>
 	</div>
 	<div id=page4__ID class=home_page_2>
-		<div class="container-fluid">
+		<div class="container-fluid containersl">
 			<div class="row">
-				<div class="row-lg-height">
-					<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
-						<div class="" style='position: relative;padding:21.5% 20% 21.4% 20%;z-index: 9;'>
-							<div class='mains__ID'>
-								<p style='font-size: 37px;'>“It’s not a matter of who you were in the past, but who you choose to be today”.</p>
-								<p style='font-size: 16px;'>Dr Pat Jansson.</p>		
-									</div>
-						</div>
+				<div id="carousel">
+					<div class="slide">
+						<img src="__CURRENT_PATH__/../../m/images/slider1.png"/>
 					</div>
-					<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+					<div class="slide">
+						<img src="__CURRENT_PATH__/../../m/images/slider2.png"/>
 					</div>
-				</div>
+					<div class="slide">
+						<img src="__CURRENT_PATH__/../../m/images/slider3.png"/>
+					</div>
+					<div class="slide">
+						<img src="__CURRENT_PATH__/../../m/images/slider4.png"/>
+					</div>
+					<div class="slide">
+						<img src="__CURRENT_PATH__/../../m/images/slider5.png"/>
+					</div>
+				</div>			
 			</div>
 		</div>
 	</div>
@@ -142,6 +147,23 @@
    		
 	</script>
 	<style>
+#carousel {
+    width: 100%;
+    background-color: rgb(233, 230, 222);;
+    
+    overflow: visible;
+    white-space:nowrap;
+}
+
+#carousel .slide {
+    display: inline-block;
+	
+}		
+.containersl {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
 		#D__ID{
 			height:100%;
 	        overflow:auto;
