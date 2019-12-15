@@ -1,5 +1,51 @@
 <div id=D__ID>
-	<div id=page2__ID class=home_page_0>
+	<div id=page__ID class=home_page_1>
+		<div class="container-fluid pt-5">
+			<div class="row pt-5 pb-5">
+				<div class="row-lg-height">
+					<div class="col-12 text-center text-white">
+						<h3>IT'S TIME TO MAKE YOUR</h3>
+					</div>						
+				</div>
+			</div>
+			<div class="row pt-5 pb-5">
+				<div class="row-lg-height">
+					<div class="col-12 text-center">
+						<a class=vm-header-home ><img  src="m/images/comeback.png" ></img></a>
+					</div>						
+				</div>
+			</div>
+			<div class="row pt-5 ">
+				<div class="row-lg-height">
+					<div class="col-12 text-white  text-center">
+						<h3><u>MAKE HISTORY. MAKE YOUR PLEDGE.</u></h3>
+					</div>						
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4 text-center text-white"></div>
+				<div class="col-1 text-center text-white">DAYS</div>
+				<div class="col-1 text-center text-white">HOURS</div>
+				<div class="col-1 text-center text-white">MINUTES</div>
+				<div class="col-1 text-center text-white">SECONDS</div>
+				<div class="col-4 text-center text-white"></div>
+			</div>	
+			<div class="row pb-5">
+				<div class="col-4 text-center text-white"></div>
+				<div id=timing_days class="col-1 text-center text-white">?</div>
+				<div id=timing_hours class="col-1 text-center text-white">?</div>
+				<div id=timing_mins class="col-1 text-center text-white">?</div>
+				<div id=timing_secs class="col-1 text-center text-white">?</div>
+				<div class="col-4 text-center text-white"></div>
+			</div>	
+			<div class="row pt-5 pb-5 ">
+				<div class="col-12 text-white  text-center">
+					<h3>&#9474;<br>&#9474;<br>&#9474;<br>&#9474;</h3>
+				</div>						
+		</div>
+		</div>
+	</div>
+	<div id=page2__ID class=home_page_2>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="row-lg-height">
@@ -11,9 +57,45 @@
 							<div class='mains__ID'>
 								<p style='font-size: 24px;'>Comeback—the world’s first Complement™ to inner motivation, relaxed focus and everyday endurance.</p>
 								<p style='font-size: 16px;'>A unique fusion of all-natural, clinically-tested select organic ingredients crafted by Dr Patric Jansson—former tennis professional and leading researcher in motivation and medicine.</p>		
-								<p style='font-size: 24px;'><a id=learn_more__ID><u>Learn more</u>&nbsp;&nbsp;&nbsp;&nbsp;<img src="m/images/right-arrow-black.png"  ></img></a>&nbsp;&nbsp;&nbsp;<a id=buy_now__ID><u>Buy now</u>&nbsp;&nbsp;&nbsp;&nbsp;<img src="m/images/right-arrow-black.png"  ></img></a></p>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id=page3__ID class=home_page_2>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="row-lg-height">
+					<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+						<div class="split-box-content";>
+							<div class='mains__ID'>
+								<p style='font-size: 24px;'>This is <i>your</i> Comeback.</p>
+								<p style='font-size: 16px;'>To our incredible community, we share our deepest gratitude for helping us turn our decade long dream into a reality. This is truly your Comeback. You made this happen. <u>Thank you.</u></p>		
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-lg-height no-padding bg-image" style="background-image: url(m/images/page1_1.png); ">
+						<div style="padding-bottom: 91.4%;" ></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id=page4__ID class=home_page_2>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="row-lg-height">
+					<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+						<div class="" style='position: relative;padding:21.5% 20% 21.4% 20%;z-index: 9;'>
+							<div class='mains__ID'>
+								<p style='font-size: 37px;'>“It’s not a matter of who you were in the past, but who you choose to be today”.</p>
+								<p style='font-size: 16px;'>Dr Pat Jansson.</p>		
+									</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
 					</div>
 				</div>
 			</div>
@@ -24,17 +106,53 @@
 			e.preventDefault();
     		$('html, body').animate({ scrollTop: $('#page2__ID').offset().top-100}, 800, 'linear');
 		})
+            // Set the date we're counting down to
+            var countDownDate = new Date("February 1, 2020 00:00:00").getTime();
+    
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+    
+            // Get today's date and time
+            var now = new Date().getTime();
+    
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+    
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            // Display the result in the element with id="demo"
+            document.getElementById("timing_days").innerHTML = days;
+            document.getElementById("timing_hours").innerHTML = hours;
+            document.getElementById("timing_mins").innerHTML = minutes;
+            document.getElementById("timing_secs").innerHTML = seconds;
+    
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+				document.getElementById("timing_days").innerHTML = 0;
+	            document.getElementById("timing_hours").innerHTML = 0;
+    	        document.getElementById("timing_mins").innerHTML = 0;
+        	    document.getElementById("timing_secs").innerHTML = 0;
+            }
+            }, 1000);
+   		
 	</script>
 	<style>
 		#D__ID{
 			height:100%;
 	        overflow:auto;
+			align-items: center;
 			/*animation: vm_module_fadein 1.0s, D__ID 3s;*/
 		}
-		.home_page_0{
-			margin-top:100px;
+		#page__ID{
+			/*margin-top:100px;*/
+			background: rgb(0, 0, 0);
 		}
-		#page__ID,#page2__ID,#page3__ID,#page4__ID,#page5__ID,#page6__ID{
+		#page2__ID,#page3__ID,#page4__ID,#page5__ID,#page6__ID{
 			height:100%;
 			display: flex;
 			align-items: center;
@@ -46,6 +164,9 @@
 			display: flex;
 			align-items: center;
 			background: rgb(233, 230, 222);
+		}
+		.v1-line{
+			border-left: '2px;solid;white'
 		}
 		.panel__ID{
 			color:#fff;
