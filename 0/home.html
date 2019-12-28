@@ -1,48 +1,43 @@
 <div id=D__ID>
 	<div id=page__ID class=home_page_1>
-		<div class="container-fluid pt-5">
-			<div class="row pt-5 pb-5">
-				<div class="row-lg-height">
-					<div class="col-12 text-center text-white">
-						<h3>IT'S TIME TO MAKE YOUR</h3>
-					</div>						
-				</div>
-			</div>
-			<div class="row pt-5 pb-5">
-				<div class="row-lg-height">
-					<div class="col-12 text-center">
-						<a class=vm-header-home ><img  src="m/images/comeback.png" ></img></a>
-					</div>						
-				</div>
-			</div>
-			<div class="row pt-5 ">
-				<div class="row-lg-height">
-					<div class="col-12 text-white  text-center">
-						<h3><u>MAKE HISTORY. MAKE YOUR PLEDGE.</u></h3>
-					</div>						
+		<div class="container-fluid pt-5" style="max-width:1000px">
+			<div class="row">
+				<div class="col-12 col-lg-height no-padding">
+					<div class="split-box-content";>
+						<div class='mains__ID' style= 'text-align:center'>
+							<p class=fontnl >IT'S TIME TO MAKE YOUR</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-4 text-center text-white"></div>
-				<div class="col-1 text-center text-white">DAYS</div>
-				<div class="col-1 text-center text-white">HOURS</div>
-				<div class="col-1 text-center text-white">MINUTES</div>
-				<div class="col-1 text-center text-white">SECONDS</div>
-				<div class="col-4 text-center text-white"></div>
-			</div>	
-			<div class="row pb-5">
-				<div class="col-4 text-center text-white"></div>
-				<div id=timing_days class="col-1 text-center text-white">?</div>
-				<div id=timing_hours class="col-1 text-center text-white">?</div>
-				<div id=timing_mins class="col-1 text-center text-white">?</div>
-				<div id=timing_secs class="col-1 text-center text-white">?</div>
-				<div class="col-4 text-center text-white"></div>
-			</div>	
-			<div class="row pt-5 pb-5 ">
-				<div class="col-12 text-white  text-center">
-					<h3>&#9474;<br>&#9474;<br>&#9474;<br>&#9474;</h3>
+				<div class="col-12 col-lg-height col-lg-middle no-padding">
+					<a class=vm-header-home ><img class='img-fluid' style=" max-width: 80%;margin-left:10%"  src="m/images/comeback.png" ></img></a>
 				</div>						
-		</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-height col-lg-middle no-padding">
+					<div class="split-box-content-no-bottom";>
+						<div class='mains__ID' style="display: flex;">
+							<div class="col-lg-2"></div>
+							<div class="col-lg-2 text-center text-white"><p id=timing_days style='font-size: 32px;margin-bottom: 0;'>?</p><p style='font-size: 17px;'>DAYS</p></div>
+							<div class="col-lg-2 text-center text-white"><p id=timing_hours style='font-size: 32px;margin-bottom: 0;'>?</p><p style='font-size: 17px;'>HOURS</p></div>
+							<div class="col-lg-2 text-center text-white"><p id=timing_mins style='font-size: 32px;margin-bottom: 0;'>?</p><p style='font-size: 17px;'>MINUTES</p></div>
+							<div class="col-lg-2 text-center text-white"><p id=timing_secs style='font-size: 32px;margin-bottom: 0;'>?</p><p style='font-size: 17px;'>SECONDS</p></div>
+							<div class="col-lg-2"></div>
+						</div>
+						<hr style='border-top: 1px solid rgba(255, 255, 255, 1);margin-left:10%;margin-right:10%;margin-top:0;margin-bottom:0;'>	
+						<div class='mains__ID' style= 'text-align:center'>
+							<p  class=fontnl >MAKE HISTORY. MAKE YOUR PLEDGE.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+					<div class="col-12">
+						<div class=vl></div>
+					</div>						
+			</div>
 		</div>
 	</div>
 	<div id=page2__ID class=home_page_2>
@@ -187,8 +182,13 @@
 			align-items: center;
 			background: rgb(233, 230, 222);
 		}
-		.v1-line{
-			border-left: '2px;solid;white'
+		.vl {
+			border-left: 1px solid white;
+			height: 150px;
+			position: absolute;
+			left: 50%;
+			margin-left: -3px;
+			top: 0;
 		}
 		.panel__ID{
 			color:#fff;
@@ -199,12 +199,6 @@
 		.mains__ID{
 			font-family: "Montserrat";
             font-weight: lighter;
-			/*width:400px;*/
-		}
-		.mains_wide__ID{
-			font-family: "Montserrat";
-            font-weight: lighter;
-			width:700px;
 		}
 		#page__ID h2{
 			text-shadow: 2px 2px 2px #fff;
@@ -249,7 +243,18 @@
     padding: 10% 20%;
     z-index: 9;
 }
+#D__ID .split-box-content-no-bottom {
+    position: relative;
+    padding: 10% 20% 3% 20%;
+    z-index: 9;
+}
+
 @media (min-width: 900px){
+	#D__ID .fontnl{
+		font-size: 24px;
+		font-weight:900;
+		color:white;
+	}
     #D__ID .col-lg-5 {
         width: 41.66666667%;
     }
@@ -288,6 +293,25 @@
         height: 100%;
         width: 100%;
     }    
+}
+@media (max-width: 899px){
+	#D__ID .fontnl{
+		font-size: 17px;
+		font-weight:900;
+		color:white;
+	}
+}
+@media (max-width: 576px){
+	#D__ID .split-box-content {
+		position: relative;
+		padding: 10% 0;
+		z-index: 9;
+	}
+	#D__ID .split-box-content-no-bottom {
+		position: relative;
+		padding: 10% 00 3% 0;
+		z-index: 9;
+	}
 }
 #D__ID .row-height, #D__ID .row-lg-height, #D__ID .row-md-height, #D__ID .row-sm-height {
     overflow: hidden;
