@@ -45,16 +45,14 @@
 	<div id=page2__ID class=home_page_2>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="row-lg-height">
-					<div class="col-lg-6 col-lg-height no-padding bg-image" style="background-image: url(m/images/page0_1.png); ">
-						<div style="padding-bottom: 91.3%;" ></div>
-					</div>
-					<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
-						<div class="split-box-content";>
-							<div class='mains__ID'>
-								<p style='font-size: 24px;margin:5%'>Comeback—the world’s first Complement™ to inner motivation, relaxed focus and everyday endurance.</p>
-								<p style='font-size: 16px;margin:5%'>A unique fusion of all-natural, clinically-tested select organic ingredients crafted by Dr Patric Jansson—former tennis professional and leading researcher in motivation and medicine.</p>		
-							</div>
+				<div class="col-lg-6 col-lg-height no-padding bg-image" style="background-image: url(m/images/page0_1.png); ">
+					<div style="padding-bottom: 91.3%;" ></div>
+				</div>
+				<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+					<div class="split-box-content";>
+						<div class='mains__ID'>
+							<p style='font-size: 24px;margin:5%'>Comeback—the world’s first Complement™ to inner motivation, relaxed focus and everyday endurance.</p>
+							<p style='font-size: 16px;margin:5%'>A unique fusion of all-natural, clinically-tested select organic ingredients crafted by Dr Patric Jansson—former tennis professional and leading researcher in motivation and medicine.</p>		
 						</div>
 					</div>
 				</div>
@@ -64,8 +62,10 @@
 	<div id=page3__ID class=home_page_2>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="row-lg-height">
-					<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+					<div class="col-lg-6  bg-image order-lg-2" style="background-image: url(m/images/page1_1.png); ">
+						<div style="padding-bottom: 91.4%;" ></div>
+					</div>
+					<div class="col-lg-6 col-lg-height col-lg-middle no-padding ">
 						<div class="split-box-content";>
 							<div class='mains__ID'>
 								<p style='font-size: 24px;margin:5%'>Your COMEBACK book</p>
@@ -81,15 +81,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-lg-height no-padding bg-image" style="background-image: url(m/images/page1_1.png); ">
-						<div style="padding-bottom: 91.4%;" ></div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
 	<div id=page4__ID class=home_page_2>
-		<div class="container-fluid containersl">
+		<div class="container-fluid ">
 			<div class="row">
 				<div class="col-12 col-lg-height no-padding">
 					<div class="" style='padding:2% 20%;text-align:center;'>
@@ -115,6 +111,26 @@
 						<img src="__CURRENT_PATH__/../../m/images/slider5.png"/>
 					</div>
 				</div>			
+			</div>
+			<div class="row">
+				<div class="container-fluid pt-5" style="max-width:1000px;overflow: hidden;">
+					<div class="col-12">
+						<hr class=vl2>
+						<div class='mains__ID' style='max-width:1000px;'>
+							<div style='display:flex'>
+								<div class='col-11'>
+									<p id=insta_text__ID style='font-size: 24px;word-wrap: break-word;'>“Thank you so much Pat (Gabi and Comeback!) for sharing your incredible story and diving deep. I love it.”</p>
+								</div>
+								<div class='col-1'>
+									<a id=next_insta__ID><img src="m/images/right-next.png"  ></img></a>
+								</div>
+							</div>
+							<div class='col-lg-12'>
+								<p id=insta_sign__ID style='font-size: 16px;'>@jamesthomas.cooper</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -156,14 +172,52 @@
         	    document.getElementById("timing_secs").innerHTML = 0;
             }
             }, 1000);
+			var insta_count=0;
+			$('#D__ID').on('load',function(){
+				$('#next_insta__ID').click();
+	        })
+			$('#next_insta__ID').on('click',function(e){
+				switch (insta_count){
+					case 0:
+						$('#insta_text__ID').html('“1Thank you so much Pat (Gabi and Comeback!) for sharing your incredible story and diving deep. I love it.”')
+						$('#insta_sign__ID').html('@jamesthomas.cooper')
+					break;
+					case 1:
+						$('#insta_text__ID').html('“2Thank you so much Pat (Gabi and Comeback!) for sharing your incredible story and diving deep. I love it.”')
+						$('#insta_sign__ID').html('@jamesthomas.cooper')
+					break;
+					case 2:
+						$('#insta_text__ID').html('“3Thank you so much Pat (Gabi and Comeback!) for sharing your incredible story and diving deep. I love it.”')
+						$('#insta_sign__ID').html('@jamesthomas.cooper')
+					break;
+					case 3:
+						$('#insta_text__ID').html('“4Thank you so much Pat (Gabi and Comeback!) for sharing your incredible story and diving deep. I love it.”')
+						$('#insta_sign__ID').html('@jamesthomas.cooper')
+					break;
+					case 4:
+						$('#insta_text__ID').html('“5Thank you so much Pat (Gabi and Comeback!) for sharing your incredible story and diving deep. I love it.”')
+						$('#insta_sign__ID').html('@jamesthomas.cooper')
+					break;
+					case 5:
+						$('#insta_text__ID').html('“6Thank you so much Pat (Gabi and Comeback!) for sharing your incredible story and diving deep. I love it.”')
+						$('#insta_sign__ID').html('@jamesthomas.cooper')
+					break;
+				}
+				insta_count++;
+				if(insta_count>5) insta_count=0;
+			})
    		
 	</script>
 	<style>
+#next_insta__ID{
+	cursor:pointer;
+}
+
 #carousel {
     width: 100%;
     background-color: rgb(233, 230, 222);;
     
-    overflow: visible;
+    overflow: auto;
     white-space:nowrap;
 }
 
@@ -205,6 +259,14 @@
 			position: absolute;
 			left: 50%;
 			top: 0;
+		}
+		.vl2 {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			border: 0;
+			border-top: 2px solid rgba(0, 0, 0, 0.3);
+			margin-left: 0;
+			margin-right: 0;
 		}
 		.panel__ID{
 			color:#fff;
