@@ -7,7 +7,7 @@
                     <div class="split-box-content";>
                         <div class='mains__ID' style= 'text-align:left;margin-left:5%'>
                             <p class=fontem >Connect with us.</p>
-                            <input class="form-control form-control-lg" style='background-color: transparent;border-bottom: 1px solid black;' type="text" placeholder="Email Address" name=email_address>
+                            <input class="form-control form-control-lg" style='background-color: transparent;border-bottom: 1px solid black;' type="text" placeholder="Email Address" id=email_address__ID name=email_address >
                             <p class=fontems ></p>
                             <p class=fontems >By signing up, you agree to receive emails from Comeback and agree to our terms of use and privacy policy.</p>
                         </div>
@@ -145,7 +145,6 @@
             }
             //-------------------------------
             m.submit=function(event){
-                console.log('123')
                 //--------------------------------------------------------
                 event.preventDefault();
                 $('#submit__ID').hide();
@@ -246,7 +245,6 @@
             //--------------------------------------------------------
             $('#D__ID').on('load',function(){ m.load();})
             $('#F__ID').submit(function(event){
-                console.log('456')
                 m.submit(event);})
             //--------------------------------------------------------
             $('#delete__ID').on('click', function(){
@@ -332,11 +330,16 @@
             //-------------------------------------
 			var before_submit = m.before_submit;
 			m.before_submit = function (data, index) {
-                if($('#email_address').val()=="" || $('#email_address').val()==undefined ) {$vm.alert("No email entered"); return false;}
-                
-                return before_submit(data, index);
-			}
-
+                console.log($('#email_address__ID').val());
+                if($('#email_address__ID').val()=="" || $('#email_address__ID').val()==undefined ) {$vm.alert("No email entered"); return false;}
+                var tb = 'comeback-email-address'
+                var qry = {'Data.email_address':$('#email_address__ID').val()};
+                jQuery.ajaxSetup({async:false});
+                $vm.request({ cmd: "find", table: tb, query: qry, options: {} }, function (res) {
+                    if (res.result.length > 0) {console.log('B'+res.result.length);jQuery.ajaxSetup({async:true});$vm.alert("Duplicated Email"); return false;}
+                    else { console.log('A'+res.result.length);jQuery.ajaxSetup({async:true});return before_submit(data, index);}
+                })
+    		}
 }
         //------------------------------------
         $vm.footer_ready=1;
