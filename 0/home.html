@@ -132,6 +132,15 @@
 					</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="container-fluid pt-5" style="max-width:1000px;overflow: hidden;">
+					<div class="col-12">
+								<div class='col-1'>
+									<a id=top__ID><img src="m/images/top.png"  ></img></a>
+								</div>
+							</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script>
@@ -176,7 +185,11 @@
 			$('#D__ID').on('load',function(){
 				$('#next_insta__ID').click();
 	        })
-			$('#next_insta__ID').on('click',function(e){
+			$('#top__ID').on('click',function(){
+                $(window).scrollTop(0);
+			})
+
+			$('#next_insta__ID').on('click',function(){
 				switch (insta_count){
 					case 0:
 						$('#insta_text__ID').html('“1Thank you so much Pat (Gabi and Comeback!) for sharing your incredible story and diving deep. I love it.”')
@@ -290,6 +303,9 @@
 	            animation: vm_module_fadein 1.0s;
 	        }
 	    }
+		#top__ID{
+			cursor:pointer;
+		}
 		#learn_more__ID{
 			cursor:pointer;
 		}
