@@ -59,7 +59,7 @@
             //-------------------------------------
             VmInclude:__COMPONENT__/f/form.01.js
             //-------------------------------------
-            var before_submit = m.before_submit;
+            //var before_submit = m.before_submit;
 			m.before_submit = function (data, index) {
                 console.log(data)
                 var count=0;
@@ -73,7 +73,7 @@
                 jQuery.ajaxSetup({async:true});
                 if (count > 0) {console.log('B'+count);$vm.alert("Duplicated Email");return false;}
                 console.log('A'+count);
-                return before_submit(data, index);
+                return true;
     		}
 }
         //------------------------------------
