@@ -75,34 +75,34 @@
 			<div class="row">
 				<div id="carousel">
 					<div class="slide">
-						<img src="__CURRENT_PATH__/../../m/images/slide1.png"/>
+						<img src="__CURRENT_PATH__/../../m/images/slide-1.png"/>
 					</div>
 					<div class="slide">
-						<img src="__CURRENT_PATH__/../../m/images/slide2.png"/>
+						<img src="__CURRENT_PATH__/../../m/images/slide-2.png"/>
 					</div>
 					<div class="slide">
-						<img src="__CURRENT_PATH__/../../m/images/slide3.png"/>
+						<img src="__CURRENT_PATH__/../../m/images/slide-3.png"/>
 					</div>
 					<div class="slide">
-						<img src="__CURRENT_PATH__/../../m/images/slide4.png"/>
+						<img src="__CURRENT_PATH__/../../m/images/slide-4.png"/>
 					</div>
 					<div class="slide">
-						<img src="__CURRENT_PATH__/../../m/images/slide5.png"/>
+						<img src="__CURRENT_PATH__/../../m/images/slide-5.png"/>
 					</div>
 					<div class="slide">
-						<img src="__CURRENT_PATH__/../../m/images/slide6.png"/>
+						<img src="__CURRENT_PATH__/../../m/images/slide-6.png"/>
 					</div>
 					<div class="slide">
-						<img src="__CURRENT_PATH__/../../m/images/slide7.png"/>
+						<img src="__CURRENT_PATH__/../../m/images/slide-7.png"/>
 					</div>
 					<div class="slide">
-						<img src="__CURRENT_PATH__/../../m/images/slide8.png"/>
+						<img src="__CURRENT_PATH__/../../m/images/slide-8.png"/>
 					</div>
 					<div class="slide">
-						<img src="__CURRENT_PATH__/../../m/images/slide9.png"/>
+						<img src="__CURRENT_PATH__/../../m/images/slide-9.png"/>
 					</div>
 					<div class="slide">
-						<img src="__CURRENT_PATH__/../../m/images/slide10.png"/>
+						<img src="__CURRENT_PATH__/../../m/images/slide-10.png"/>
 					</div>
 				</div>			
 			</div>
@@ -153,8 +153,14 @@
 	</div>
 	<script>
 		console.log(document.documentElement.clientHeight)
+		console.log(document.documentElement.clientWidth)
 		var pad=document.documentElement.clientHeight/9;
-		var padst2=(2*pad).toString()+'px';
+		var toppad=2;
+		if(document.documentElement.clientWidth<576){
+			pad=document.documentElement.clientHeight/20;
+			toppad=5;
+		}
+		var padst2=(toppad*pad).toString()+'px';
 		var padst=pad.toString()+'px';
 		document.getElementById("topdiv__ID").style.paddingTop=padst2;
 		document.getElementById("logodiv__ID").style.paddingTop=padst;
@@ -379,7 +385,7 @@
     z-index: 9;
 }
 
-@media (min-width: 900px){
+@media (min-width: 992px){
 	#D__ID .fontnl{
 		font-size: 17px;
 		font-weight:700;

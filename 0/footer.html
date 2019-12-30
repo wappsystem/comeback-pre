@@ -67,8 +67,8 @@
                 var tb = 'comeback-email-address'
                 var qry = {'Data.email_address':$('#email_address__ID').val()};
                 jQuery.ajaxSetup({async:false});
-                $vm.request({ cmd: "find", table: tb, query: qry, options: {} }, function (res) {
-                    count=res.result.length;
+                $vm.request({ cmd: "count", table: tb, query: qry, options: {} }, function (res) {
+                    count=res.result;
                 })
                 jQuery.ajaxSetup({async:true});
                 if (count > 0) {console.log('B'+count);$vm.alert("Duplicated Email");return false;}
