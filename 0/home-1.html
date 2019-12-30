@@ -1,16 +1,24 @@
 <div id=D__ID>
-	<div id=page__ID class="home_page_1">
+	<div id=page__ID class=home_page_1>
 		<div class="container-fluid pt-5" style="max-width:1000px;overflow: hidden;">
 			<div class="row">
-				<div class="col-12">
-					<div class="";>
-						<div class='mains__ID' id=topdiv__ID style= 'text-align:center;'>
+				<div class="col-12 col-lg-height no-padding">
+					<div class="split-box-content";>
+						<div class='mains__ID' style= 'text-align:center'>
 							<p class=fontnl >IT'S TIME TO MAKE YOUR</p>
 						</div>
-						<div class="col-12" id=logodiv__ID>
-							<a class=vm-header-home ><img class='img-fluid' style=" max-width: 80%;margin-left:10%;"  src="m/images/comeback.png" ></img></a>
-						</div>						
-						<div class='mains__ID' id=bottomdiv__ID style="display: flex;">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-height col-lg-middle no-padding">
+					<a class=vm-header-home ><img class='img-fluid' style=" max-width: 80%;margin-left:10%"  src="m/images/comeback.png" ></img></a>
+				</div>						
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-height col-lg-middle no-padding">
+					<div class="split-box-content-no-bottom";>
+						<div class='mains__ID' style="display: flex;">
 							<div class="col-lg-2"></div>
 							<div class="col-lg-2 text-center text-white"><p id=timing_days class=fontxl>?</p><p class=fontxs>DAYS</p></div>
 							<div class="col-lg-2 text-center text-white"><p id=timing_hours class=fontxl>?</p><p class=fontxs>HOURS</p></div>
@@ -20,11 +28,18 @@
 						</div>
 						<div class='mains__ID' style= 'text-align:center;'>
 							<hr style='border-top: 1px solid rgba(255, 255, 255, 1);margin-left:10%;margin-right:10%;'>	
-							<p  class=fontnl style=''>MAKE HISTORY. MAKE YOUR PLEDGE.</p>
+							<p  class=fontnl style= ''>MAKE HISTORY. MAKE YOUR PLEDGE.</p>
 						</div>
 					</div>
 				</div>
 			</div>
+<!--			<div class="row">
+				<div class="col-12 col-lg-height col-lg-middle">
+					<div class="split-box-content-no-bottom";>
+						<div class=vl></div>
+					</div>
+				</div>						
+			</div>-->
 		</div>
 	</div>
 	<div id=page2__ID class=home_page_2>
@@ -137,13 +152,6 @@
 		</div>
 	</div>
 	<script>
-		console.log(document.documentElement.clientHeight)
-		var pad=document.documentElement.clientHeight/9;
-		var padst2=(2*pad).toString()+'px';
-		var padst=pad.toString()+'px';
-		document.getElementById("topdiv__ID").style.paddingTop=padst2;
-		document.getElementById("logodiv__ID").style.paddingTop=padst;
-		document.getElementById("bottomdiv__ID").style.paddingTop=padst;
 		$('#scroll_down__ID').on('click',function(e){
 			e.preventDefault();
     		$('html, body').animate({ scrollTop: $('#page2__ID').offset().top-100}, 800, 'linear');
