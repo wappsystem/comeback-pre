@@ -7,7 +7,7 @@
                     <div class="split-box-content";>
                         <div class='mains__ID' style= 'text-align:left;margin-left:5%'>
                             <p class=fontem >Connect with us.</p>
-                            <input class="form-control form-control-lg" style='background-color: transparent;border-bottom: 1px solid black;' type="text" placeholder="Email Address" id=email_address__ID name=email_address >
+                            <input class="form-control form-control-lg" style='background-color: transparent;border-bottom: 1px solid black;' type="text" placeholder="Email Address" id=email_address__ID name=_email_address >
                             <div class=row>
                                 <div  class="col-lg-3">
                                     <button id=submit__ID type="submit" class="btn" >SUBMIT <img src="m/images/right-arrow-black.png"  ></img></button>
@@ -65,10 +65,11 @@
                 var count=0;
                 if($('#email_address__ID').val()=="" || $('#email_address__ID').val()==undefined ) {$vm.alert("No email entered"); return false;}
                 var tb = 'comeback-email-address'
-                var qry = {'Data.email_address':$('#email_address__ID').val()};
+                //var qry = {'Data.email_address':$('#email_address__ID').val()};
                 jQuery.ajaxSetup({async:false});
-                $vm.request({ cmd: "count", table: tb, query: qry, options: {} }, function (res) {
-                    count=res.result;
+                $vm.request({ cmd: "find-u", table: tb, options: {},name:'email_address',value:$('#email_address__ID').val() }, function (res) {
+                // $vm.request({ cmd: "find_u", table: tb, query: qry, options: {} }, function (res) {
+                    count=res.result.length;
                 })
                 jQuery.ajaxSetup({async:true});
                 if (count > 0) {console.log('B'+count);$vm.alert("Duplicated Email");return false;}
