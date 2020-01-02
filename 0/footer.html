@@ -6,9 +6,9 @@
                 <div class="col-lg-5 col-sm-10 col-lg-height no-padding">
                     <div class="split-box-content";>
                         <div class='mains__ID' style= 'text-align:left;margin-left:5%'>
-                            <p class=fontem >Connect with us.</p>
+                            <p class='fontem' >CONNECT WITH US.</p>
                             <input class="form-control form-control-lg" style='background-color: transparent;border-bottom: 1px solid black;' type="text" placeholder="Email Address" id=email_address__ID name=_email_address >
-                            <div class=row>
+                            <div class='row pt-2'>
                                 <div  class="col-lg-3">
                                     <button id=submit__ID type="submit" class="btn" >SUBMIT <img src="m/images/right-arrow-black.png"  ></img></button>
                                 </div>
@@ -32,7 +32,7 @@
                             <a class=fontfot href='https://www.facebook.com/facebookapp' target=_blank >THE CAMPAIGN</a><br>
                             <a class=fontfot href='https://www.instagram.com/comebackyourway/?hl=en' target=_blank >THE CREATORS</a><br>
                             <a class=fontfot href='https://www.instagram.com/comebackyourway/?hl=en' target=_blank >THE COMMUNITY</a><br>
-                            <a class=fontfot href='https://www.facebook.com/facebookapp' target=_blank >CONTACT</a><br>
+                            <a class=fontfot id=contact__ID>CONTACT</a><br>
                             <p class=fontfot >&nbsp;</p>
                             <p class=fontfot >&nbsp;</p>
                         </div>
@@ -47,7 +47,7 @@
                             <p class=fontfot >&nbsp;</p>
                             <p class=fontfot >&nbsp;</p>
                             <a ><img class='img-fluid' src="m/images/logo-black-small.png" ></img></a>
-                            <p class=fontfot >ALL RIGHTS RESERVED</p>
+                            <p class=fontems >ALL RIGHTS RESERVED</p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
             //-------------------------------------
             VmInclude:__COMPONENT__/f/form.01.js
             //-------------------------------------
-            //var before_submit = m.before_submit;
+            $('#contact__ID').on('click',function(){ $vm.alert('During our campain you can follow us for updates on Facebook');})
 			m.before_submit = function (data, index) {
                 console.log(data)
                 var count=0;
