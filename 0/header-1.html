@@ -1,41 +1,9 @@
 <div id=D__ID>
-    <div class="vm-header mt-0 row container__ID" >
-            <div class="vm-header-bar col-2"><div class="clearfix visible-xs"></div>
-                <span class='' onclick="$vm.openNav()"><img class=bars__ID src="m/images/bars.png" ><img></span>
-            </div>
-        <div id="mySidenav__ID" class="sidenav__ID vm-menu">
-            <a onclick="$vm.closeNav()"><img id=close__ID class="closebtn__ID" src="m/images/close-btn.png" ></img></a>
-            <div class=sidenav_links__ID>
-                <a class=fontfot href='https://www.facebook.com/comebackyourway/' target=_blank >THE CAMPAIGN</a><br>
-                <a class=fontfot href='https://www.instagram.com/comebackyourway/?hl=en' target=_blank >THE CREATORS</a><br>
-                <a class=fontfot href='https://www.instagram.com/comebackyourway/?hl=en' target=_blank >THE COMMUNITY</a><br>
-                <a class=fontfot id=contact2__ID>CONTACT</a>
-            </div>
-        </div>
+   <div class="vm-header mt-0 row container__ID" >
+   <!--      <div class="col-12"><div class="clearfix visible-xs"></div>
+            <a class=vm-header-home href="?home" ><img  id=logo__ID src="m/images/logo-black.png" ></img></a>
+        </div>-->
     </div>
-     <!-- The Modal -->
-     <div class="modal" id="myModal__ID">
-        <div class="modal-dialog">
-          <div class="modal-content">      
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h4 class="modal-title" id=modal_title__ID></h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <!-- Modal body -->
-            <div class="modal-body" id=modal_body__ID>
-             
-            </div>
-            <!-- Modal footer -->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-      <button type="button" id=alert__ID class="btn btn-primary" data-toggle="modal" data-target="#myModal__ID" style='display:none'>
-    
     <script>
 
         $vm.openNav=function() {
@@ -57,7 +25,7 @@
         }
 
 
-        $('#close__ID').css('padding-left',"10px");
+        $('#close__ID').css('padding-left',-20+$(window).width()*0.08+"px");
         $('#closeright__ID').css('padding-right',-20+$(window).width()*0.08+"px");
         //------------------------------------
         $('#vm-mobile_title').on('click',function(){ $vm.load_module('home',$vm.root_layout_content_slot,{}) })
@@ -115,7 +83,6 @@
             $vm.closeNav();
         })
         */
-        $('#contact2__ID').on('click',function(){$('#modal_title__ID').html('Follow us');$('#modal_body__ID').html('During our campain you can follow us for updates on Facebook'); $('#alert__ID').click();})
         //------------------------------------
         $vm.menu_click=function(href){
             href=href.replace('?\/','');
@@ -129,20 +96,20 @@
     <style>
         /*----------------------*/
         #header{
-            height:100px;
+            height:0;
             /*padding-bottom:29px;*/
-            /*position:fixed;*/
+            position:fixed;
             top:0;
             left:0;
             width:100%;
-            background:rgb(0, 0, 0);
+            background:rgb(233, 230, 222);
             z-index:10;
             border-bottom: 1px solid #000;
         }
         .vm-desk-logo{float:left;padding:36px 30px 0 30px;cursor:pointer;}
         #vm-menu{float:right; padding:50px 30px 0 30px;}
         @media screen and (max-width: 900px){
-            #header{height:100px;}
+            /*#header{height:100px;}*/
             .vm-desk-logo{display:none;}
             #vm-menu{padding:0;}
         }
@@ -165,8 +132,7 @@
         .vm-header, .vm-header a{
             color:var(--header-color);
         }
-        #D__ID #contact2__ID{
-            cursor: pointer;
+        .container__ID{
         }
         #vm-logo-image{
             margin-top: -32px;
@@ -263,13 +229,6 @@
         .vm-mobile{
             display:none;
         }
-        #D__ID .fontfot{
-            font-size: 15px;
-            font-weight:normal;
-            margin:0;
-            letter-spacing: 0.2rem;
-        }
-
         /*----------------------*/
         @media screen and (max-width: 1200px) {
             .vm-mobile{
@@ -355,15 +314,15 @@
             letter-spacing: 0.2rem;
         }
         .sidenav__ID {
-            height: 300px;
+            height: 100%;
             width: 0;
-            position: absolute;
+            position: fixed;
             z-index: 1;
             top: 0;
             left: 0;
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(233, 230, 222);
             overflow-x: hidden;
-            /*transition: 0.5s;*/
+            transition: 0.5s;
         }
 
         .sidenav__ID a {
@@ -371,7 +330,7 @@
             font-weight: lighter;
             text-decoration: none;
             font-size: 25px;
-            color: #fff;
+            color: #000;
             display: block;
         }
 
@@ -380,7 +339,7 @@
             font-weight: normal;
         }
         .sidenav_links__ID{
-            padding-top: 20px;
+            padding-top: 100px;
             padding-left: 40px;
         }
         .rightsidenav_links__ID{
@@ -470,7 +429,8 @@
             /*padding: 40px 0 0 82px;*/
             cursor: pointer;
             display: block;
-            margin-left: 10px;
+            margin-left: auto;
+            margin-right: auto; 
         }
         #logo__ID {
             display: block;

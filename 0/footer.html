@@ -53,16 +53,42 @@
             </div>
         </form>
     </div>
+
+     <!-- The Modal -->
+  <div class="modal" id="myModal__ID">
+    <div class="modal-dialog">
+      <div class="modal-content">      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" id=modal_title__ID></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body" id=modal_body__ID>
+         
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <button type="button" id=alert__ID class="btn btn-primary" data-toggle="modal" data-target="#myModal__ID" style='display:none'>
+    Open modal
+  </button>
     <script>
       	function F__ID(){
             //-------------------------------------
             VmInclude:__COMPONENT__/f/form.01.js
             //-------------------------------------
-            $('#contact__ID').on('click',function(){ $vm.alert('During our campain you can follow us for updates on Facebook');})
+            $('#contact__ID').on('click',function(){$('#modal_title__ID').html('Follow us');$('#modal_body__ID').html('During our campain you can follow us for updates on Facebook'); $('#alert__ID').click();})
 			m.before_submit = function (data, index) {
                 console.log(data)
                 var count=0;
-                if($('#email_address__ID').val()=="" || $('#email_address__ID').val()==undefined ) {$vm.alert("No email entered"); return false;}
+                if($('#email_address__ID').val()=="" || $('#email_address__ID').val()==undefined ) {$('#modal_title__ID').html('Email Missing');$('#modal_body__ID').html('Please fill in an email address before submit.'); $('#alert__ID').click(); return false;}
                 var tb = 'comeback-email-address'
                 //var qry = {'Data.email_address':$('#email_address__ID').val()};
                 jQuery.ajaxSetup({async:false});
@@ -71,7 +97,7 @@
                     count=res.result.length;
                 })
                 jQuery.ajaxSetup({async:true});
-                if (count > 0) {console.log('B'+count);$vm.alert("Duplicated Email");return false;}
+                if (count > 0) {console.log('B'+count);$('#modal_title__ID').html('Duplicated Email');$('#modal_body__ID').html('Your email is already registered.'); $('#alert__ID').click();;return false;}
                 console.log('A'+count);
                 return true;
     		}
@@ -93,6 +119,13 @@
 
         #D__ID{
             overflow: hidden;
+        }
+        #D__ID #myModal__ID{
+            font-family: "Montserrat";
+            font-weight: normal;
+        }
+        #D__ID #myModal__ID .modal-content{
+            background-color: rgb(233, 230, 222);
         }
         #D__ID .fontem{
             font-size: 17px;
