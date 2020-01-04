@@ -88,7 +88,7 @@
 			m.before_submit = function (data, index) {
                 console.log(data)
                 var count=0;
-                if($('#email_address__ID').val()=="" || $('#email_address__ID').val()==undefined ) {$('#modal_title__ID').html('Email Missing');$('#modal_body__ID').html('Please fill in an email address before submit.'); $('#alert__ID').click(); return false;}
+                if($('#email_address__ID').val()=="" || $('#email_address__ID').val()==undefined ) {$('#modal_title__ID').html('Email Missing');$('#modal_body__ID').html('Please fill in an email address before submitting.'); $('#alert__ID').click(); return false;}
                 var tb = 'comeback-email-address'
                 //var qry = {'Data.email_address':$('#email_address__ID').val()};
                 jQuery.ajaxSetup({async:false});

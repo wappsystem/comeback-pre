@@ -1,14 +1,14 @@
 <div id=D__ID>
     <div class="vm-header mt-0 row container__ID" >
         <div class="vm-header-bar col-2"><div class="clearfix visible-xs"></div>
-            <span class='' onclick="$vm.openNav()"><img style='margin-left:55px' class=bars__ID src="m/images/bars.png" ><img></span>
+            <span class='' onclick="$vm.openNav()"><img class=bars__ID src="m/images/bars.png" ><img></span>
         </div>
         <div id="mySidenav__ID" class="sidenav__ID vm-menu">
-            <a onclick="$vm.closeNav()"><img id=close__ID style='margin-left:50px' class="closebtn__ID" src="m/images/close-btn.png" ></img></a>
-            <div class=sidenav_links__ID>
-                <a class=fontfot href='https://www.facebook.com/comebackyourway/' target=_blank >THE CAMPAIGN</a><br>
-                <a class=fontfot href='https://www.instagram.com/comebackyourway/?hl=en' target=_blank >THE CREATORS</a><br>
-                <a class=fontfot href='https://www.instagram.com/comebackyourway/?hl=en' target=_blank >THE COMMUNITY</a><br>
+            <a onclick="$vm.closeNav()"><img id=close__ID class="closebtn__ID" src="m/images/close-btn.png" ></img></a>
+            <div class='sidenav_links__ID '>
+                <a class=fontfot href='https://www.facebook.com/comebackyourway/' target=_blank >THE CAMPAIGN</a>
+                <a class=fontfot href='https://www.instagram.com/comebackyourway/?hl=en' target=_blank >THE CREATORS</a>
+                <a class=fontfot href='https://www.instagram.com/comebackyourway/?hl=en' target=_blank >THE COMMUNITY</a>
                 <a class=fontfot id=contact2__ID>CONTACT</a>
             </div>
         </div>
@@ -39,7 +39,10 @@
     <script>
 
         $vm.openNav=function() {
-            document.getElementById("mySidenav__ID").style.width = "250px";
+            document.getElementById("mySidenav__ID").style.width = "270px";
+            if(document.documentElement.clientWidth<576){
+                document.getElementById("mySidenav__ID").style.width = "170px";
+            }
         }
         $vm.closeNav=function(){
             document.getElementById("mySidenav__ID").style.width = "0";
@@ -57,7 +60,7 @@
         }
 
 
-        $('#close__ID').css('padding-left',"10px");
+        //$('#close__ID').css('padding-left',"10px");
         $('#closeright__ID').css('padding-right',-20+$(window).width()*0.08+"px");
         //------------------------------------
         $('#vm-mobile_title').on('click',function(){ $vm.load_module('home',$vm.root_layout_content_slot,{}) })
@@ -273,7 +276,7 @@
         #D__ID .fontfot{
             font-size: 15px;
             font-weight:normal;
-            margin:0;
+            margin:0.5rem;
             letter-spacing: 0.2rem;
         }
 
@@ -388,7 +391,7 @@
         }
         .sidenav_links__ID{
             padding-top: 20px;
-            padding-left: 60px;
+            padding-left: 55px;
         }
         .rightsidenav_links__ID{
             padding-top: 10px;
@@ -412,7 +415,6 @@
             overflow-x: hidden;
             transition: 0.5s;
         }
-
         .rightsidenav__ID a {
             font-family: "Montserrat";
             font-weight: lighter;
@@ -436,11 +438,6 @@
         }
         .closerightbtn__ID{
             padding: 40px 50px 0 0;
-            cursor: pointer;
-        }
-
-        .closebtn__ID{
-            padding-top: 35px;/* 0 0 70px;*/
             cursor: pointer;
         }
         .vm-header-bar{
@@ -474,10 +471,14 @@
             transform: translate(-50%, -50%);
         }
         .bars__ID{
-            /*padding: 40px 0 0 82px;*/
             cursor: pointer;
             display: block;
-            margin-left: 10px;
+            margin-left: 55px;
+        }
+        .closebtn__ID{
+            padding-top: 35px;
+            cursor: pointer;
+            margin-left: 60px;
         }
         #logo__ID {
             display: block;
@@ -488,6 +489,55 @@
         #cart_img__ID{
             padding-top:35px;
         }       
+
+        @media (max-width: 785px){
+            #D__ID .fontfot{
+                font-size: 12px;
+                font-weight:normal;
+                margin:0.5rem;
+                letter-spacing: 0.2rem;
+            }
+            .sidenav_links__ID{
+                padding-top: 20px;
+                padding-left: 35px;
+            }
+            .bars__ID{
+                cursor: pointer;
+                display: block;
+                margin-left: 40px;
+            }
+            .closebtn__ID{
+                padding-top: 35px;
+                cursor: pointer;
+                margin-left: 44px;
+            }
+        }
+
+        @media (max-width: 576px){
+            #D__ID .fontfot{
+                font-size: 9px;
+                font-weight:normal;
+                margin:0.5rem;
+                letter-spacing: 0.2rem;
+            }
+            .sidenav_links__ID{
+                padding-top: 20px;
+                padding-left: 20px;
+            }
+            .bars__ID{
+                cursor: pointer;
+                display: block;
+                margin-left: 25px;
+            }
+            .closebtn__ID{
+                padding-top: 35px;
+                cursor: pointer;
+                margin-left: 25px;
+            }
+            .sidenav__ID {
+                height: 180px;
+            }
+        }
 
         @media screen and (max-height: 450px) {
         }
