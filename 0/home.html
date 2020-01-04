@@ -176,8 +176,8 @@
 			pad=document.documentElement.clientHeight/20;
 			toppad=5;
 		}
-		var padst2=(toppad*pad).toString()+'px';
-		var padst=pad.toString()+'px';
+		var padst2=(toppad*pad-100).toString()+'px';
+		var padst=(pad-100).toString()+'px';
 		document.getElementById("topdiv__ID").style.paddingTop=padst2;
 		document.getElementById("logodiv__ID").style.paddingTop=padst;
 		document.getElementById("bottomdiv__ID").style.paddingTop=padst;

@@ -1,10 +1,10 @@
 <div id=D__ID>
     <div class="vm-header mt-0 row container__ID" >
-            <div class="vm-header-bar col-2"><div class="clearfix visible-xs"></div>
-                <span class='' onclick="$vm.openNav()"><img class=bars__ID src="m/images/bars.png" ><img></span>
-            </div>
+        <div class="vm-header-bar col-2"><div class="clearfix visible-xs"></div>
+            <span class='' onclick="$vm.openNav()"><img style='margin-left:100px' class=bars__ID src="m/images/bars.png" ><img></span>
+        </div>
         <div id="mySidenav__ID" class="sidenav__ID vm-menu">
-            <a onclick="$vm.closeNav()"><img id=close__ID class="closebtn__ID" src="m/images/close-btn.png" ></img></a>
+            <a onclick="$vm.closeNav()"><img id=close__ID style='margin-left:95px' class="closebtn__ID" src="m/images/close-btn.png" ></img></a>
             <div class=sidenav_links__ID>
                 <a class=fontfot href='https://www.facebook.com/comebackyourway/' target=_blank >THE CAMPAIGN</a><br>
                 <a class=fontfot href='https://www.instagram.com/comebackyourway/?hl=en' target=_blank >THE CREATORS</a><br>
@@ -39,7 +39,7 @@
     <script>
 
         $vm.openNav=function() {
-            document.getElementById("mySidenav__ID").style.width = "350px";
+            document.getElementById("mySidenav__ID").style.width = "250px";
         }
         $vm.closeNav=function(){
             document.getElementById("mySidenav__ID").style.width = "0";
@@ -164,6 +164,13 @@
         }
         .vm-header, .vm-header a{
             color:var(--header-color);
+        }
+        #D__ID #myModal__ID{
+            font-family: "Montserrat";
+            font-weight: normal;
+        }
+        #D__ID #myModal__ID .modal-content{
+            background-color: rgb(233, 230, 222);
         }
         #D__ID #contact2__ID{
             cursor: pointer;
@@ -355,7 +362,7 @@
             letter-spacing: 0.2rem;
         }
         .sidenav__ID {
-            height: 300px;
+            height: 250px;
             width: 0;
             position: absolute;
             z-index: 1;
