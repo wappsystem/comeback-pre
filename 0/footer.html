@@ -1,61 +1,5 @@
 <div id=D__ID>
     <div id=footer__ID> 
-        <form id=F__ID>
-            <hr>
-            <div class="row">
-                <div class="col-lg-5 col-sm-10 col-lg-height no-padding">
-                    <div class="split-box-content";>
-                        <div class='mains__ID' style= 'text-align:left;margin-left:5%'>
-                            <p class='fontfot' >COMEBACK LETTERS</p>
-                            <div style='display:flex'>
-                                <input class="form-control form-control-lg" style='background-color: transparent;border-bottom: 1px solid black;' type="text" placeholder="Your email address" id=email_address__ID name=_email_address >
-                                <button id=submit__ID type="submit" class="btn" ><img src="m/images/right-arrow-black.png"  ></img></button>
-                            </div>
-                            <div class='row pt-2'>
-                                <div   class="col-lg-12">
-                                    <p class=fontems style='padding-top:7px'>By signing up for Comeback Letters, you agree to receive emails from Comeback and agree to our <b>terms of service</b> and <b>privacy policy.</b></p>
-                                    <p class=fontems >No charge. No spam. <b>Unsubscribe</b> anytime.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-<!--                <div class='col-lg-1 col-sm-2'>
-                    <div class='mains__ID' style= 'text-align:left;margin-left:5%'>
-                        <p class=fontem >&nbsp;</p>
-                        <button id=submit__ID type="submit" class="btn" ><img src="m/images/right-next.png"  ></img></button>
-                    </div>
-                </div>-->
-                <div class="col-lg-3 col-sm-12 col-lg-height no-padding">
-                    <div class=vlf></div>
-                    <div class="split-box-content";>
-                        <div class='mains__ID' style= 'text-align:left;margin-left:5%'>
-                            <a class=fontfot id=campign__ID >CAMPAIGN</a><br>
-                            <a class=fontfot id=creator__ID  >CREATOR</a><br>
-                            <a class=fontfot  id=community__ID >COMMUNITY</a><br>
-                            <a class=fontfot id=contact__ID>CONTACT</a><br>
-                            <p class=fontfot >&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-12 col-lg-height no-padding">
-                    <div class=vlf></div>
-                    <div class="split-box-content";>
-                        <div class='mains__ID' style= 'text-align:left;margin-left:5%'>
-                            <a class=fontfot href='https://www.instagram.com/comebackyourway/?hl=en' target=_blank >INSTAGRAM</a><br>
-                            <!--<a class=fontfot href='https://www.facebook.com/comebackyourway/' target=_blank  >FACEBOOK</a><br>-->
-                            <p class=fontfot >&nbsp;</p>
-                            <a ><img class='img-fluid' src="m/images/logo-black-small.png" ></img></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div style='text-align: center;' class='fontems'>
-                    <a id=c_footer  ></a>
-                </div>
-            </div>
-        </form>
     </div>
 
      <!-- The Modal -->
@@ -84,42 +28,6 @@
     Open modal
   </button>
     <script>
-      	function F__ID(){
-            //-------------------------------------
-            VmInclude:__COMPONENT__/f/form.01.js
-            //-------------------------------------
-            $('#campign__ID').on('click',function(){$('#modal_title__ID').html('CAMPAIGN');$('#modal_body__ID').html('Subscribe to Comeback Letters to get updates on the Kickstarter book launch.'); $('#alert__ID').click();})
-            $('#community__ID').on('click',function(){$('#modal_title__ID').html('COMMUNITY');$('#modal_body__ID').html('Visit our Instagram account (@comebackyourway) to join our community.'); $('#alert__ID').click();})
-            $('#contact__ID').on('click',function(){$('#modal_title__ID').html('Contact us');$('#modal_body__ID').html('During our campain you can follow us for updates on Facebook'); $('#alert__ID').click();})
-            //$('#creator__ID').on('click',function(){
-              //  console.log("AAAAAA");
-    		    //$('#page3__ID').animate({ scrollTop:0}, 'slow');})
-            //---------------
-			m.before_submit = function (data, index) {
-                console.log(data)
-                var count=0;
-                if($('#email_address__ID').val()=="" || $('#email_address__ID').val()==undefined ) {$('#modal_title__ID').html('Email Missing');$('#modal_body__ID').html('Please fill in an email address before submitting.'); $('#alert__ID').click(); return false;}
-                var tb = 'comeback-email-address'
-                //var qry = {'Data.email_address':$('#email_address__ID').val()};
-                jQuery.ajaxSetup({async:false});
-                $vm.request({ cmd: "find-u", table: tb, options: {},name:'email_address',value:$('#email_address__ID').val() }, function (res) {
-                // $vm.request({ cmd: "find_u", table: tb, query: qry, options: {} }, function (res) {
-                    count=res.result.length;
-                })
-                jQuery.ajaxSetup({async:true});
-                if (count > 0) {console.log('B'+count);$('#modal_title__ID').html('Duplicated Email');$('#modal_body__ID').html('Your email is already registered.'); $('#alert__ID').click();;return false;}
-                console.log('A'+count);
-                return true;
-    		}
-}        //------------------------------------
-        var txt="Copyright © 2019 - "+(new Date()).getFullYear()+", COMEBACK<sup>&reg;</sup>, Lofmark Pty Ltd. · All Rights Reserved ";
-        $('#c_footer').html(txt);
-        //------------------------------------
-
-        //------------------------------------
-        $vm.footer_ready=1;
-        //------------------------------------
-
     </script>
 
     <style>
@@ -181,7 +89,7 @@
             /*height:90px;*/
             overflow: hidden;
             color: #000;
-            padding: 12px;
+            padding: 0px;
             background-color: rgb(233, 230, 222);
             font-size:100%;
             text-align: center;
